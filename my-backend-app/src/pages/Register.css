@@ -1,0 +1,71 @@
+.register-container {
+    width: 400px;
+    padding: 40px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #f0f4c3, #81d4fa); /* Gradient */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    text-align: center;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em; /* Font size */
+    font-weight: 600; /* Bold font */
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-container div {
+    margin-bottom: 15px;
+}
+
+.register-container label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    display: block;
+    color: #004d4d; /* Dark color */
+}
+
+.register-container input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9; /* Light background for input fields */
+    color: #333;
+    font-size: 1em;
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box;
+}
+
+.register-container input:focus {
+    outline: none;
+    border: 2px solid #81d4fa; /* Highlight border */
+}
+
+.register-container button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #004d4d; /* Button color */
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container button:hover {
+    background-color: #007a7a; /* Lighter shade for hover */
+}
+
+.create-account-link {
+    color: #004d4d; /* Match the theme */
+    text-decoration: none;
+}
+
+.create-account-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}

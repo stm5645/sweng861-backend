@@ -1,0 +1,109 @@
+.dashboard-container {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0; /* Remove side padding */
+}
+
+.dashboard-header {
+    background-color: #004d4d;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.card {
+    background: linear-gradient(135deg, #f0f4c3, #81d4fa);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px; /* Increased margin for spacing */
+    width: 400px;
+    text-align: center;
+    z-index: 0;
+    position: relative;
+    top: 600px; /* Adjusted value to move it down */
+}
+
+.card h3 {
+    color: #004d4d;
+}
+
+.card p {
+    color: #555;
+}
+
+.card button {
+    background-color: #004d4d; /* Match button color */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.card button:hover {
+    background-color: #007a7a; /* Hover color */
+}
+
+.submissions {
+    margin-top: 30px; /* Increased top margin for better separation */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff; /* Light background for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width of the container */
+}
+
+.submission-list {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0; /* Remove margin to keep it clean */
+}
+
+.submission-item {
+    border: 1px solid #e0e0e0; /* Add border around each item */
+    border-radius: 5px; /* Rounded corners for items */
+    padding: 10px; /* Padding for items */
+    margin: 5px; /* Space between items */
+    flex: 1 1 150px; /* Flex properties: grow, shrink, and base width */
+}
+
+.submission-item strong {
+    color: #004d4d; /* Match the theme color */
+}
+
+.logout-container {
+    position: absolute; /* Position it absolutely */
+    top: 20px; /* Adjust this for vertical spacing */
+    right: 20px; /* Align it to the right */
+    z-index: 2; /* Ensure it's above other elements */
+}
+
+.logout-button {
+    background-color: #008080; /* Lighter teal */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.logout-button:hover {
+    background-color: #00b3b3;
+}
