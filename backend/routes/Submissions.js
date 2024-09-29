@@ -1,11 +1,11 @@
 const express = require('express');
+const Submission = require('../models/Submission');
 const router = express.Router();
-const Submission = require('../models/Submission'); // Correct model import
 
-// Fetch all submissions
+// Fetch all submissions for the logged-in user
 router.get('/', async (req, res) => {
   try {
-    const submissions = await Submission.find(); // Fetch all submissions
+    const submissions = await Submission.find({ userId: req.user.id });
     res.json(submissions);
   } catch (error) {
     res.status(500).json({ message: 'Server error' });
@@ -14,15 +14,16 @@ router.get('/', async (req, res) => {
 
 // Create a new submission
 router.post('/create', async (req, res) => {
-  console.log('Received request at /create:', req.body); // Log the request body to verify data
+  const newSubmission = new Submission({
+    ...req.body,
+    userId: req.user.id
+  });
+
   try {
-    const newSubmission = new Submission(req.body);
     await newSubmission.save();
-    console.log('New submission saved:', newSubmission); // Log the saved submission
-    res.status(201).json(newSubmission); // Send the created submission back in response
+    res.status(201).json(newSubmission);
   } catch (error) {
-    console.error('Error creating submission:', error); // Log any errors that occur
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ message: 'Error creating submission', error: error.message });
   }
 });
 

@@ -1,10 +1,10 @@
 .dataform-container {
     width: 500px; /* Increased width for more space */
-    padding: 30px; /* Adjusted padding */
+    padding: 30px; 
     border-radius: 15px;
     background: linear-gradient(135deg, #f0f4c3, #81d4fa);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    margin: 100px auto; /* Center and push down */
+    margin: 100px auto; 
     text-align: center;
 }
 
@@ -16,9 +16,9 @@
 
 .dataform-container div {
     margin-bottom: 15px;
-    width: 100%; /* Ensure the div takes full width */
-    display: flex; /* Use flexbox for centering */
-    flex-direction: column; /* Stack label and input vertically */
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
     align-items: center; /* Center items horizontally */
 }
 
@@ -33,11 +33,11 @@
     background: #f9f9f9;
     color: #333;
     font-size: 1em;
-    width: 80%; /* Adjust width as needed */
+    width: 80%; 
 }
 
 .dataform-container button {
-    background-color: #004d4d; /* Match button color */
+    background-color: #004d4d; 
     color: white;
     border: none;
     padding: 12px 20px;
@@ -58,7 +58,7 @@
 
 .dataform-container input:focus {
     border: 2px solid #81d4fa;
-    outline: none; /* Remove default outline */
+    outline: none; 
 }
 
   

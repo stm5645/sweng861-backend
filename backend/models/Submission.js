@@ -8,7 +8,12 @@ const SubmissionSchema = new mongoose.Schema({
   address: String,
   course: String,
   semester: String,
-  comments: String
+  comments: String,
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  }
 });
 
 module.exports = mongoose.model('Submission', SubmissionSchema);

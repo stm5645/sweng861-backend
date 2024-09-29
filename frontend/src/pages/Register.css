@@ -34,7 +34,7 @@
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background: #f9f9f9; /* Light background for input fields */
+    background: #f9f9f9;
     color: #333;
     font-size: 1em;
     width: 100%; /* Full width of the container */
@@ -62,10 +62,10 @@
 }
 
 .create-account-link {
-    color: #004d4d; /* Match the theme */
+    color: #004d4d; 
     text-decoration: none;
 }
 
 .create-account-link:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
 }

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0; /* Remove side padding */
+    padding: 20px 0; 
 }
 
 .dashboard-header {
@@ -31,7 +31,7 @@
     text-align: center;
     z-index: 0;
     position: relative;
-    top: 600px; /* Adjusted value to move it down */
+    top: 600px; 
 }
 
 .card h3 {
@@ -58,50 +58,62 @@
 }
 
 .submissions {
-    margin-top: 30px; /* Increased top margin for better separation */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    background: linear-gradient(135deg, #f0f4c3, #81d4fa); /* Gradient background */
+    background: linear-gradient(135deg, #f0f4c3, #81d4fa);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Full width of the container */
+    width: 100%;
+    height: auto;
 }
 
-.submissions h3 {
+.submissions h3, .submissions p {
    color: #004d4d;
+   text-align: center;
+}
+
+.submissions p {
+   color: gray;
 }
 
 .submission-list {
-    display: flex; /* Use flexbox for horizontal layout */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    list-style-type: none; /* Remove default list styling */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
     padding: 0;
-    margin: 0; /* Remove margin to keep it clean */
+    margin: 0;
+    width: 100%;
 }
 
 .submission-item {
     background-color: #ffffff;
-    border: 1px solid #004d4d; /* Blue border for consistency */
+    border: 1px solid #004d4d;
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
-    color: #004d4d; /* Match the theme */
-    flex: 1 1 150px; /* Flex properties: grow, shrink, and base width */
+    color: #004d4d;
+    flex: 1 1 150px;
 }
 
 .submission-item strong {
-    color: #004d4d; /* Darker blue for strong text */
+    color: #004d4d;
 }
 
 .logout-container {
-    position: absolute; /* Position it absolutely */
-    top: 20px; /* Adjust this for vertical spacing */
-    right: 20px; /* Align it to the right */
-    z-index: 2; /* Ensure it's above other elements */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
 }
 
 .logout-button {
-    background-color: #008080; /* Lighter teal */
+    background-color: #008080;
     color: white;
     padding: 10px 20px;
     border: none;

@@ -4,7 +4,7 @@ import './Login.css';
 const Login = ({ onLogin, onRegister, setUserName }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState('');  // Add username field
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,8 +19,10 @@ const Login = ({ onLogin, onRegister, setUserName }) => {
       const data = await response.json();
 
       if (response.ok) {
-        setUserName(username);  // Set the username from backend response
-        onLogin(username, data.token);  // Proceed to dashboard with token
+        // Set the entered username
+        setUserName(username);  // Set the username from the form
+        const { token, userId } = data;
+        onLogin(username, userId, token);  // Pass the userId and token to App.js
       } else {
         alert(data.msg || 'Invalid credentials');
       }
@@ -39,7 +41,7 @@ const Login = ({ onLogin, onRegister, setUserName }) => {
 
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Username:</label>
+            <label>Username:</label> {/* Username input field */}
             <input
               type="text"
               value={username}
@@ -82,6 +84,7 @@ const Login = ({ onLogin, onRegister, setUserName }) => {
 };
 
 export default Login;
+
 
 
 
