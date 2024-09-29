@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-const Login = ({ onLogin, setUserName }) => {
+const Login = ({ onLogin, onRegister, setUserName }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [username, setUsername] = useState('');  // Store the username entered by the user
+  const [username, setUsername] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,8 +19,8 @@ const Login = ({ onLogin, setUserName }) => {
       const data = await response.json();
 
       if (response.ok) {
-        setUserName(username);  // Use the entered username and pass it to the parent
-        onLogin(username, data.token);  // Pass the token to handleLogin
+        setUserName(username);  // Set the username from backend response
+        onLogin(username, data.token);  // Proceed to dashboard with token
       } else {
         alert(data.msg || 'Invalid credentials');
       }
@@ -39,7 +39,7 @@ const Login = ({ onLogin, setUserName }) => {
 
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Username:</label> {/* New input for username */}
+            <label>Username:</label>
             <input
               type="text"
               value={username}
@@ -72,7 +72,7 @@ const Login = ({ onLogin, setUserName }) => {
         </form>
         <p>
           Don't have an account?{' '}
-          <span onClick={() => onLogin(false)} className="create-account-link" style={{ color: 'blue', cursor: 'pointer' }}>
+          <span onClick={onRegister} className="create-account-link" style={{ color: 'blue', cursor: 'pointer' }}>
             Create one now!
           </span>
         </p>
@@ -82,6 +82,7 @@ const Login = ({ onLogin, setUserName }) => {
 };
 
 export default Login;
+
 
 
 

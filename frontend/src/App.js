@@ -17,7 +17,6 @@ const App = () => {
     setIsLoggedIn(true);
     setUserName(name);
     setToken(token); // Save token for future requests
-    setIsRegistering(false);
 
     // Fetch submissions after login
     try {
@@ -89,10 +88,15 @@ const App = () => {
       ) : isRegistering ? (
         <Register onRegister={handleSuccessfulRegistration} />
       ) : (
-        <Login onLogin={handleLogin} onRegister={handleRegister} setUserName={setUserName} />
+        <Login 
+          onLogin={handleLogin} 
+          onRegister={handleRegister} // Ensure this is correctly set
+          setUserName={setUserName} 
+        />
       )}
     </div>
   );
 };
 
 export default App;
+
